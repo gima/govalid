@@ -25,4 +25,4 @@ It is recommended to pass pointers to the Validators, as this avoids making
 copies of data and thus avoids unnecessary garbage collection.
 Make no mistake, non-pointers work perfectly fine as well.
 */
-package jsonv
+package jsonv2

@@ -1,4 +1,4 @@
-package jsonv
+package jsonv2
 
 import (
 	"fmt"

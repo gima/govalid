@@ -1,4 +1,4 @@
-package jsonv
+package jsonv2
 
 // Validator validates any data type that the implementing validator supports.
 type Validator interface {
