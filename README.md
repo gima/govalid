@@ -6,7 +6,7 @@ This library can be used to validate [most data types]((https://godoc.org/github
 
 #### Documentation
 
-[![godoc](https://img.shields.io/badge/godoc-reference-5976b1.svg?style=flat-square)](https://godoc.org/github.com/gima/jsonv2) and (sorry, but for the time being) [tests](https://github.com/gima/jsonv2/tree/master/examples)
+[![godoc](https://img.shields.io/badge/godoc-reference-5976b1.svg?style=flat-square)](https://godoc.org/github.com/gima/jsonv2) and (sorry, but for the time being) [tests](https://github.com/gima/jsonv2/tree/master/tests)
 
 #### Import
 
@@ -41,7 +41,7 @@ schema := j.Object(
 Validate some data using the schema:
 
 ```go
-if path, err := schema.Validate(decoded); err == nil {
+if path, err := schema.Validate(data); err == nil {
 	t.Log("Validation passed.")
 } else {
 	t.Fatalf("Validation failed at %s. Error (%s)", path, err)
@@ -51,7 +51,8 @@ if path, err := schema.Validate(decoded); err == nil {
 ```go
 // Example of failed validation:
 
-// Validation failed at Object->Key[data].Value->Object->Key[debug].Value->Number. Error (expected (*)data convertible to float64, got bool)
+// Validation failed at Object->Key[data].Value->Object->Key[debug].Value->Number.
+// Error (expected (*)data convertible to float64, got bool)
 ```
 
 ## Greets

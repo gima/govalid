@@ -32,8 +32,8 @@ func TestExample(t *testing.T) {
 		}`)
 
 	// decode json
-	var decoded interface{}
-	if err := json.Unmarshal(rawJson, &decoded); err != nil {
+	var data interface{}
+	if err := json.Unmarshal(rawJson, &data); err != nil {
 		t.Fatal("JSON parsing failed. Err =", err)
 	}
 
@@ -73,7 +73,7 @@ func TestExample(t *testing.T) {
 	)
 
 	// do the actual validation
-	if path, err := schema.Validate(decoded); err == nil {
+	if path, err := schema.Validate(data); err == nil {
 		t.Log("Validation passed.")
 	} else {
 		t.Fatalf("Validation failed at %s. Error (%s)", path, err)
