@@ -1,6 +1,6 @@
 ## Data validation library for `golang´
 
-This library can be used to validate [most data types]((https://godoc.org/github.com/gima/jsonv2) supported by golang. Custom validators can be used where the supplied ones are not enough.
+This library can be used to validate [most data types](https://godoc.org/github.com/gima/jsonv2) supported by golang. Custom validators can be used where the supplied ones are not enough.
 
 *Besides the name, there's no connection to json.*
 
