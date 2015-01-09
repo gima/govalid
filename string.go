@@ -14,6 +14,7 @@ type StringOpt func(*string) error
 // -----------------------------------------------------------------------------
 
 // Construct a string validator using the specified validator functions.
+// Validates data type to be either a string or a pointer to such.
 func String(opts ...StringOpt) Validator {
 	return &stringValidator{opts}
 }

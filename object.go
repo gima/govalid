@@ -14,6 +14,7 @@ type ObjectOpt func(m *reflect.Value) (path string, err error)
 // -----------------------------------------------------------------------------
 
 // Construct an object validator using the specified validation functions.
+// Validates data type to be either a map or a pointer to such
 //
 // Currently this validator supports only map data type.
 func Object(opts ...ObjectOpt) Validator {

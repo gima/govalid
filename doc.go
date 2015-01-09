@@ -16,8 +16,8 @@ The supplied validators understand the following data types:
 This leaves out
 	complex, chan, func, interface, struct and unsafepointer
 
-(Don't be fooled by missing interface{} support, as interface{} itself is not
-passed around. Instead other data types are wrapped inside an interface{}.)
+(Don't be fooled by missing interface{} support, as this library uses reflection
+to reach values, and reflection goes from interface value to reflection object.)
 
 Regarding pointers
 

@@ -14,6 +14,8 @@ type NumberOpt func(float64) error
 // -----------------------------------------------------------------------------
 
 // Construct a number validator using the specified validation functions.
+// Validates data type to be either any numerical type or a pointer to such
+// (except a complex number).
 func Number(opts ...NumberOpt) Validator {
 	return &numberValidator{opts}
 }

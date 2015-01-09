@@ -7,6 +7,7 @@ import (
 // -----------------------------------------------------------------------------
 
 // Construct a logical-or validator using the specified validators.
+// Given no validators, this validator passes always.
 func Or(validators ...Validator) Validator {
 	return &orValidator{validators}
 }

@@ -13,6 +13,7 @@ type ArrayOpt func(slice *reflect.Value) (path string, err error)
 // -----------------------------------------------------------------------------
 
 // Construct an array validator using the specified validation functions.
+// Validates data type to be either an array or a slice, or a pointer to such.
 func Array(opts ...ArrayOpt) Validator {
 	return &arrayValidator{opts}
 }

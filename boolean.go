@@ -13,6 +13,7 @@ type BooleanOpt func(bool) error
 // -----------------------------------------------------------------------------
 
 // Construct a boolean validator using the specified validation functions.
+// Validates data type to be either a bool or a pointer to such.
 func Boolean(opts ...BooleanOpt) Validator {
 	return &boolValidator{opts}
 }

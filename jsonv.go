@@ -2,7 +2,7 @@ package jsonv2
 
 // Validator validates any data type that the implementing validator supports.
 type Validator interface {
-	// Validates the given data.
+	// Validate the given data.
 	// In the case of a failed validation, path indicates which validator failed.
 	Validate(interface{}) (path string, err error)
 }

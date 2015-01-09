@@ -7,6 +7,7 @@ import (
 // -----------------------------------------------------------------------------
 
 // Construct a logical-and validator using the specified validators.
+// Given no validators, this validator passes always.
 func And(validators ...Validator) Validator {
 	return &andValidator{validators}
 }
