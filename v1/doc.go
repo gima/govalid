@@ -5,9 +5,9 @@ Data type verification
 
 The supplied Validators verify data's type implicitly; they don't need extra
 parameters during their construction to do so.
-	// This means, for example, that the following String validation code
-	// verifies that "asd" is of string type, even though given no parameters.
-	path, err := jsonv2.Strings().Validate("asd")
+	// This means, for example, that the following code verifies that "asd" is of
+	// string type, even though no parameters are given to the String validator.
+	path, err := govalid.String().Validate("asd")
 
 Supported data types
 
@@ -25,4 +25,4 @@ It is recommended to pass pointers to the Validators, as this avoids making
 copies of data and thus avoids unnecessary garbage collection.
 Make no mistake, non-pointers work perfectly fine as well.
 */
-package jsonv2
+package govalid

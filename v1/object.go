@@ -1,8 +1,8 @@
-package jsonv2
+package govalid
 
 import (
 	"fmt"
-	"github.com/gima/jsonv2/internal"
+	"github.com/gima/govalid/v1/internal"
 	"reflect"
 )
 

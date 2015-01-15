@@ -1,4 +1,4 @@
-package jsonv2
+package govalid
 
 import (
 	"fmt"
