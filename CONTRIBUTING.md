@@ -20,4 +20,5 @@ Try to cover the necessary cases.
 
     go test -cover ./tests/ -coverpkg ./ -coverprofile cover.out; go tool cover -html=cover.out -o coverage.html
 
-*This contribution readme was shamelessly modelled after:  http://opencomparison.readthedocs.org/en/latest/contributing.html*
+*This contribution readme was shamelessly modelled after:  
+http://opencomparison.readthedocs.org/en/latest/contributing.html*
