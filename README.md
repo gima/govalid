@@ -4,7 +4,9 @@ This library can be used to validate [most data types](https://godoc.org/github.
 
 #### Documentation
 
-[![godoc](https://img.shields.io/badge/godoc-reference-5976b1.svg?style=flat-square)](https://godoc.org/github.com/gima/govalid/v1) and (sorry, but for the time being) [tests](https://github.com/gima/govalid/tree/master/v1/tests)
+Introduction below and [![godoc](https://img.shields.io/badge/godoc-reference-5976b1.svg?style=flat-square)](https://godoc.org/github.com/gima/govalid/v1)
+
+You can also take a look at the "[tests/](https://github.com/gima/govalid/tree/master/v1/tests)" folder. (Sorry. If you feel more documentation is needed, please open an issue.)
 
 #### Import
 
@@ -53,11 +55,17 @@ if path, err := schema.Validate(data); err == nil {
 // Error (expected (*)data convertible to float64, got bool)
 ```
 
-## Greets
-Idea loosely based on [js-schema](https://github.com/molnarg/js-schema), thank you.
+## Similar libraries
+
+`Go` [check](https://github.com/pengux/check)  
+`Javascript` [js-schema](https://github.com/molnarg/js-schema), [jsonvalidator](https://code.google.com/p/jsonvalidator/)  
+`Python` [voluptuous](https://pypi.python.org/pypi/voluptuous), [json_schema](https://pypi.python.org/pypi/json_schema)  
+`Ruby` [json-schema](https://rubygems.org/gems/json-schema)
+
+Original idea for jsonv (version 0 of this library, before rename) loosely based on [js-schema](https://github.com/molnarg/js-schema), thank you.
 
 ## License
 
-Public Domain (see UNLICENSE.txt). Mention of origin would be appreciated.
+http://unlicense.org (see UNLICENSE.txt). Mention of origin would be appreciated.
 
-*go, golang*
+*jsonv, jsonv2, json validator, json validation, alternative, go, golang*
