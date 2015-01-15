@@ -1,17 +1,15 @@
 ## Data validation library for `golang´
 
-This library can be used to validate [most data types](https://godoc.org/github.com/gima/jsonv2) supported by golang. Custom validators can be used where the supplied ones are not enough.
-
-*Besides the name, there's no connection to json.*
+This library can be used to validate [most data types](https://godoc.org/github.com/gima/govalid) supported by golang. Custom validators can be used where the supplied ones are not enough.
 
 #### Documentation
 
-[![godoc](https://img.shields.io/badge/godoc-reference-5976b1.svg?style=flat-square)](https://godoc.org/github.com/gima/jsonv2) and (sorry, but for the time being) [tests](https://github.com/gima/jsonv2/tree/master/tests)
+[![godoc](https://img.shields.io/badge/godoc-reference-5976b1.svg?style=flat-square)](https://godoc.org/github.com/gima/govalid) and (sorry, but for the time being) [tests](https://github.com/gima/govalid/tree/master/tests)
 
 #### Import
 
 ```go
-import j "github.com/gima/jsonv2"
+import v "github.com/gima/govalid"
 ```
 
 #### Intro & Usage
@@ -19,20 +17,20 @@ import j "github.com/gima/jsonv2"
 Create validator:
 
 ```go
-schema := j.Object(
-	j.ObjKV("status", j.Boolean()),
-	j.ObjKV("data", j.Object(
-		j.ObjKV("token", j.Function(myValidatorFunc)),
-		j.ObjKV("debug", j.Number(j.NumMin(1), j.NumMax(99999))),
-		j.ObjKV("items", j.Array(j.ArrEach(j.Object(
-			j.ObjKV("url", j.String(j.StrMin(1))),
-			j.ObjKV("comment", j.Optional(j.String())),
+schema := v.Object(
+	v.ObjKV("status", v.Boolean()),
+	v.ObjKV("data", v.Object(
+		v.ObjKV("token", v.Function(myValidatorFunc)),
+		v.ObjKV("debug", v.Number(v.NumMin(1), v.NumMax(99999))),
+		v.ObjKV("items", v.Array(v.ArrEach(v.Object(
+			v.ObjKV("url", v.String(v.StrMin(1))),
+			v.ObjKV("comment", v.Optional(v.String())),
 		)))),
-		j.ObjKV("ghost", j.Optional(j.String())),
-		j.ObjKV("ghost2", j.Optional(j.String())),
-		j.ObjKV("meta", j.Object(
-			j.ObjKeys(j.String()),
-			j.ObjValues(j.Or(j.Number(j.NumMin(.01), j.NumMax(1.1)), j.String())),
+		v.ObjKV("ghost", v.Optional(v.String())),
+		v.ObjKV("ghost2", v.Optional(v.String())),
+		v.ObjKV("meta", v.Object(
+			v.ObjKeys(v.String()),
+			v.ObjValues(v.Or(v.Number(v.NumMin(.01), v.NumMax(1.1)), v.String())),
 		)),
 	)),
 )

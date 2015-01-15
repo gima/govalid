@@ -1,5 +1,5 @@
 /*
-Data validation library. For introduction, visit https://github.com/gima/jsonv2/blob/master/README.md
+Data validation library. For introduction, visit https://github.com/gima/govalid/blob/master/README.md
 
 Data type verification
 

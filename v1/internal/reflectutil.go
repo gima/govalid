@@ -1,4 +1,4 @@
-// This package is internal to jsonv, do not use externally.
+// This package is internal, do not use externally.
 package internal
 
 import (
