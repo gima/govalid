@@ -1,15 +1,15 @@
 ## Data validation library for `golang´
 
-This library can be used to validate [most data types](https://godoc.org/github.com/gima/govalid) supported by golang. Custom validators can be used where the supplied ones are not enough.
+This library can be used to validate [most data types](https://godoc.org/github.com/gima/govalid/v1) supported by golang. Custom validators can be used where the supplied ones are not enough.
 
 #### Documentation
 
-[![godoc](https://img.shields.io/badge/godoc-reference-5976b1.svg?style=flat-square)](https://godoc.org/github.com/gima/govalid) and (sorry, but for the time being) [tests](https://github.com/gima/govalid/tree/master/tests)
+[![godoc](https://img.shields.io/badge/godoc-reference-5976b1.svg?style=flat-square)](https://godoc.org/github.com/gima/govalid/v1) and (sorry, but for the time being) [tests](https://github.com/gima/govalid/tree/master/v1/tests)
 
 #### Import
 
 ```go
-import v "github.com/gima/govalid"
+import v "github.com/gima/govalid/v1"
 ```
 
 #### Intro & Usage
