@@ -67,6 +67,8 @@ Original idea for jsonv (version 0 of this library, before rename) loosely based
 
 ## License
 
-http://unlicense.org (see UNLICENSE.txt). Mention of origin would be appreciated.
+http://unlicense.org  
+Authoritative: UNLICENSE.txt  
+Mention of origin would be appreciated.
 
 *jsonv, jsonv2, json validator, json validation, alternative, go, golang*
