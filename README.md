@@ -4,7 +4,8 @@ This library can be used to validate [most data types](https://godoc.org/github.
 
 #### Documentation
 
-Introduction below and [![godoc](https://img.shields.io/badge/godoc-reference-5976b1.svg?style=flat-square)](https://godoc.org/github.com/gima/govalid/v1)
+* Introduction below
+* [![godoc](https://img.shields.io/badge/godoc-reference-5976b1.svg?style=flat-square)](https://godoc.org/github.com/gima/govalid/v1)
 
 You can also take a look at the "[tests/](https://github.com/gima/govalid/tree/master/v1/tests)" folder. (Sorry. If you feel more documentation is needed, please open an issue.)
 
