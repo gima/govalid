@@ -1,10 +1,12 @@
-## Data validation library for `golang´
-
 [![Build Status](https://travis-ci.org/gima/govalid.svg?branch=master)](https://travis-ci.org/gima/govalid)
 [![Coverage Status](https://coveralls.io/repos/gima/govalid/badge.svg?branch=master)](https://coveralls.io/r/gima/govalid?branch=master)
 [![License: Unlicense](https://img.shields.io/badge/%E2%9C%93-unlicense-4cc61e.svg?style=flat)](http://unlicense.org)
 
+
+## Data validation library for `golang´
+
 This library can be used to validate [most data types](https://godoc.org/github.com/gima/govalid/v1) supported by golang. Custom validators can be used where the supplied ones are not enough.
+
 
 #### Documentation
 
@@ -13,11 +15,13 @@ This library can be used to validate [most data types](https://godoc.org/github.
 
 You can also take a look at the "[tests/](https://github.com/gima/govalid/tree/master/v1/tests)" folder. (Sorry. If you feel more documentation is needed, please open an issue.)
 
+
 #### Import
 
 ```go
 import v "github.com/gima/govalid/v1"
 ```
+
 
 #### Intro & Usage
 
@@ -60,6 +64,7 @@ if path, err := schema.Validate(data); err == nil {
 // Error (expected (*)data convertible to float64, got bool)
 ```
 
+
 ## Similar libraries
 
 `Go` [check](https://github.com/pengux/check)  
@@ -68,6 +73,7 @@ if path, err := schema.Validate(data); err == nil {
 `Ruby` [json-schema](https://rubygems.org/gems/json-schema)
 
 Original idea for jsonv (version 0 of this library, before rename) loosely based on [js-schema](https://github.com/molnarg/js-schema), thank you.
+
 
 ## License
 
