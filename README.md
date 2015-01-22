@@ -1,5 +1,9 @@
 ## Data validation library for `golang´
 
+[![Build Status](https://travis-ci.org/gima/govalid.svg?branch=master)](https://travis-ci.org/gima/govalid)
+[![Coverage Status](https://coveralls.io/repos/gima/govalid/badge.svg?branch=master)](https://coveralls.io/r/gima/govalid?branch=master)
+[![License: Unlicense](https://img.shields.io/badge/%E2%9C%93-unlicense-4cc61e.svg?style=flat)](http://unlicense.org)
+
 This library can be used to validate [most data types](https://godoc.org/github.com/gima/govalid/v1) supported by golang. Custom validators can be used where the supplied ones are not enough.
 
 #### Documentation
