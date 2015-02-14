@@ -1,31 +1,17 @@
-[![Build Status](https://travis-ci.org/gima/govalid.svg?branch=master)](https://travis-ci.org/gima/govalid)
-[![Coverage Status](https://coveralls.io/repos/gima/govalid/badge.svg?branch=master)](https://coveralls.io/r/gima/govalid?branch=master)
-[![License: Unlicense](https://img.shields.io/badge/%E2%9C%93-unlicense-4cc61e.svg?style=flat)](http://unlicense.org)
 
 
-## Data validation library for `golang´
+# Govalid [![godoc](https://godoc.org/github.com/gima/govalid/v1?status.png)](https://godoc.org/github.com/gima/govalid/v1) [![Build Status](https://travis-ci.org/gima/govalid.svg?branch=master)](https://travis-ci.org/gima/govalid) [![Coverage Status](https://coveralls.io/repos/gima/govalid/badge.svg?branch=master)](https://coveralls.io/r/gima/govalid?branch=master) [![License: Unlicense](https://img.shields.io/badge/%E2%9C%93-unlicense-4cc61e.svg?style=flat)](http://unlicense.org)
 
-This library can be used to validate [most data types](https://godoc.org/github.com/gima/govalid/v1) supported by golang. Custom validators can be used where the supplied ones are not enough.
-
-
-#### Documentation
-
-* Introduction below
-* [![godoc](https://godoc.org/github.com/gima/govalid/v1?status.png)](https://godoc.org/github.com/gima/govalid/v1)
-
-You can also take a look at the "[tests/](https://github.com/gima/govalid/tree/master/v1/tests)" folder. (Sorry. If you feel more documentation is needed, please open an issue.)
-
-
-#### Import
+Govalid is a data validation library that can validate [most data types](https://godoc.org/github.com/gima/govalid/v1) supported by golang. Custom validators can be used where the supplied ones are not enough.
 
 ```go
 import v "github.com/gima/govalid/v1"
 ```
 
 
-#### Intro & Usage
+## Example
 
-Create validator:
+Create a validator:
 
 ```go
 schema := v.Object(
@@ -47,7 +33,7 @@ schema := v.Object(
 )
 ```
 
-Validate some data using the schema:
+Validate some data using the created validator:
 
 ```go
 if path, err := schema.Validate(data); err == nil {
@@ -63,6 +49,9 @@ if path, err := schema.Validate(data); err == nil {
 // Validation failed at Object->Key[data].Value->Object->Key[debug].Value->Number.
 // Error (expected (*)data convertible to float64, got bool)
 ```
+
+You can also take a look at the "[tests/](https://github.com/gima/govalid/tree/master/v1/tests)" folder. (Sorry, but if you feel more documentation is needed, please open an issue.)
+
 
 
 ## Similar libraries
