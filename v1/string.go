@@ -57,6 +57,18 @@ func StrIs(expected string) StringOpt {
 
 // -----------------------------------------------------------------------------
 
+// String validator function for checking equality of string and pointer string.
+func PStrIs(expected *string) StringOpt {
+	return func(s *string) error {
+		if *s != *expected {
+			return fmt.Errorf("expected %s, got %s", *expected, *s)
+		}
+		return nil
+	}
+}
+
+// -----------------------------------------------------------------------------
+
 // String validator function for checking regular expression match of the string.
 // If regular expression has error, the error is returned when validation is performed.
 func StrRegExp(expr string) StringOpt {
