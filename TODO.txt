@@ -1,13 +1,19 @@
 -- 2015/01/09
 # support data type: interface
-reasoning:
-	passing interface{} value copies the data, and that needs to be avoidable.
-	(for example `json.Unmarshal` needs a pointer to an interface{} as well)
-plan:
-	generic function that uses reflection to dive into the first non-pointer &
-	non-interface value and then returns that reflection Value.
-	(this function would then be used in the beginning of every validator
-	workhorse)
+
+DOCUMENT VERY CAREFULLY HOW VALIDATION WORKS! "implicit diving into pointers". then user has validated struct ok,
+  what happend when they try to type assert hmm? do [plan] and make it clear and that they need to use some other
+  library to reach the data maybe or something
+
+BLABLABLA WTF
+  reasoning:
+    passing interface{} value copies the data, and that needs to be avoidable.
+    (for example `json.Unmarshal` needs a pointer to an interface{} as well)
+  plan:
+    generic function that uses reflection to reach the first non-pointer &
+    non-interface value and then returns that reflection Value.
+    (this function would then be used in the beginning of every validator
+    workhorse)
 
 # [MAYBE] validation functions should be more generic
 reasoning AGAINST:
