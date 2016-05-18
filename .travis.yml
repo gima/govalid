@@ -9,4 +9,4 @@ install:
 script:
   - go test -v -covermode=count -coverprofile=cover.prof -cover -coverpkg ./v1 ./v1/tests
   - cat cover.prof
-  - goveralls -coverprofile cover.prof -repotoken $COVERALLS_TOKEN
+  - goveralls -coverprofile=cover.prof -repotoken=$COVERALLS_TOKEN
