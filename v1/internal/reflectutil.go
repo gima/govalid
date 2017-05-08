@@ -60,3 +60,15 @@ func ReflectPtrOrFabricate(i interface{}) (*reflect.Value, error) {
 		return &ptr, nil
 	}
 }
+
+// Returns `reflect.Value` of `data` or the value it points to if it's a pointer.
+// Check `reflect.isValid()` to see if the value is `nil`.
+func DigValue(data interface{}) reflect.Value {
+	value := reflect.ValueOf(data)
+	if value.IsValid() {
+		if value.Kind() == reflect.Ptr {
+			return value.Elem()
+		}
+	}
+	return value
+}
