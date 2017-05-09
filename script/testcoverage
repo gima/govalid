@@ -1,0 +1,3 @@
+#!/bin/sh -xe
+go test -v -cover -coverprofile=cover.prof -covermode=count -coverpkg ./v1/ ./v1/tests/
+go tool cover -html=cover.prof -o coverage.html

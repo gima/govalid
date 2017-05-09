@@ -1,0 +1,2 @@
+#!/bin/sh -xe
+go test -v ./v1/tests/

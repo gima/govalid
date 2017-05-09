@@ -16,14 +16,13 @@ Run `go fmt` before committing.
 
 Test all reasonable code paths.
 
-    go test ./tests/
+    ./script/test
 
 #### Run code coverage
 
 Try to cover the necessary cases.
 
-    go test -cover -coverpkg . -coverprofile cover.prof ./tests
-    go tool cover -html=cover.prof -o coverage.html
+    ./script/testcoverage
     
 ---
 

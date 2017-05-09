@@ -1,12 +1,13 @@
 language: go
 sudo: false
 go:
-  - 1.4
+  - 1
 install:
-  - go get -v -d -t ./v1/...
-  - go get golang.org/x/tools/cmd/cover
-  - go get github.com/mattn/goveralls
+  - ./script/download_deps
+  - go get -v github.com/mattn/goveralls
 script:
-  - go test -v -covermode=count -coverprofile=cover.prof -cover -coverpkg ./v1 ./v1/tests
+  - ./script/testcoverage
   - cat cover.prof
+after_success:
+  # goveralls associates test coverage with correct branch by (default) reading travis-ci envvars
   - goveralls -coverprofile=cover.prof -repotoken=$COVERALLS_TOKEN
