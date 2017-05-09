@@ -1,8 +1,9 @@
 package govalid_test
 
 import (
-	v "github.com/gima/govalid/v1"
 	"testing"
+
+	v "github.com/gima/govalid/v1"
 )
 
 func TestString(t *testing.T) {
@@ -17,6 +18,10 @@ func TestString(t *testing.T) {
 
 	test(t, "equals", true, v.String(v.StrIs("abc")), "abc")
 	test(t, "!equals", false, v.String(v.StrIs("abc")), "abd")
+
+	ps := "abc"
+	test(t, "equals", true, v.String(v.PStrIs(&ps)), "abc")
+	test(t, "!equals", false, v.String(v.PStrIs(&ps)), "abd")
 
 	test(t, "minlen1", false, v.String(v.StrMin(3)), "aa")
 	test(t, "minlen2", true, v.String(v.StrMin(3)), "aaa")
