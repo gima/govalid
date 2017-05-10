@@ -1,8 +1,14 @@
 package govalid_test
 
 import (
-	v "github.com/gima/govalid/v1"
 	"testing"
+
+	v "github.com/gima/govalid/v1"
+)
+
+const (
+	PASS = true
+	FAIL = false
 )
 
 func test(t *testing.T, title string, expectPass bool, validator v.Validator, data interface{}) {
