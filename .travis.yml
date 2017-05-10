@@ -2,6 +2,9 @@ language: go
 sudo: false
 go:
   - 1
+notifications:
+  email:
+    on_success: never
 install:
   - ./script/download_deps
   - go get -v github.com/mattn/goveralls
